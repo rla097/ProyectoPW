@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexion Beach Festival</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Conexion Beach Festival 2024</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="lineup.html">Lineup</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Bienvenido a Conexion Beach Festival 2024</h2>
+            <p>¡Únete a nosotros para una experiencia inolvidable!</p>
+        </section>
+        <section id="carousel">
+            <img src="c1.jpg" alt="Imagen 1" class="carousel-image">
+        </section>
+    </main>
+    <footer>
+        <div class="ticket-box">
+            <h3><a href="tickets.html" onclick="saveTicketInfo()">Comprar Tickets</a></h3>
+            <hr>
+            <p>CBF <span class="price">$5,000.00</span></p>
+            <div class="ticket-counter">
+                <button onclick="changeTicketCount(-1)">-</button>
+                <span id="ticketCount">0</span>
+                <button onclick="changeTicketCount(1)">+</button>
+            </div>
+            <p>Total: <span id="totalPrice">$0.00</span></p>
+        </div>
+    </footer>
+    <img src="conexion.png" alt="Conexión" class="corner-image">
+    <script src="scripts.js"></script>
+</body>
+</html>

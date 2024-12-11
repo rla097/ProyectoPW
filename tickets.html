@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets - CBF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Festival Musical</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="lineup.html">Lineup</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Get your Tickets</h2>
+            <form onsubmit="return false;">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos">
+                
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+                
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <div id="fecha_nacimiento">
+                    <select id="anio" name="anio" onchange="actualizarMeses()"></select>
+                    <select id="mes" name="mes" onchange="actualizarDias()"></select>
+                    <select id="dia" name="dia"></select>
+                </div>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                
+                <label for="tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta">
+                
+                <button type="button" onclick="comprarTickets()">Comprar</button>
+            </form>
+            <div class="ticket-info">
+                <p>Cantidad de Tickets: <span id="ticketCountDisplay">0</span></p>
+                <p>Precio Total: <span id="totalPriceDisplay">$0.00</span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 CBF</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
